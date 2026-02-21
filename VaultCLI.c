@@ -36,7 +36,7 @@ int main() {
             int ch;
             while ((ch = getchar()) != '\n' && ch != EOF);
 
-            continue;   // <-- THIS IS REQUIRED
+            continue;
         }
 
         FILE *passwordVault;
