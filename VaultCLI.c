@@ -40,6 +40,7 @@ int main() {
 
             fgets(testMaster, sizeof(testMaster), stdin);
             testMaster[strcspn(testMaster, "\n")] = '\0';
+            xorEncrypt(testMaster, "Z", strlen(testMaster));
 
             if (strcmp(testMaster, savedMaster) == 0) {
                 MasterPassCheck = true;
@@ -55,6 +56,7 @@ int main() {
 
         fgets(savedMaster, sizeof(savedMaster), stdin);
         savedMaster[strcspn(savedMaster, "\n")] = '\0';
+            xorEncrypt(savedMaster, "Z", strlen(savedMaster));
 
         fwrite(&savedMaster, sizeof(savedMaster), 1, masterPassword);
         fclose(masterPassword);
